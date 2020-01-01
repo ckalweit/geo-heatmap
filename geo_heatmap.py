@@ -158,7 +158,14 @@ class Generator:
                           blur=heatmap_blur,
                           max_zoom=heatmap_max_zoom)
 
+        # Marker // 53.582952, 10.029599
+        marker_w = folium.Marker([53.5829, 10.0295], 
+                                popup='Work',
+                                icon=folium.Icon(color='blue',icon='bar-chart', prefix='fa') 
+                                )    
+
         m.add_child(heatmap)
+        m.add_child(marker_w)
         return m
 
     def run(self, data_files, output_file, date_range, stream_data, tiles):
